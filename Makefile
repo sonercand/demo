@@ -1,5 +1,5 @@
 setup:
-	python3 -m venv ~/venv
+	python3 -m venv ~/.udacity
 
 install:
 	pip install --upgrade pip &&\
@@ -12,6 +12,6 @@ test:
 
 lint:
 	#hadolint Dockerfile #uncomment to explore linting Dockerfiles
-	pylint --disable=R,C,W120,W1203,W07023,W0702,W0703 app.py
+	pylint --disable=R,C,W0702,W0703 app.py
 
 all: install lint test
