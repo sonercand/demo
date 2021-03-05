@@ -1,5 +1,4 @@
-[![Python application test with Github Actions](https://github.com/sonercand/flaskapp-azure-ci-cd/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/sonercand/flaskapp-azure-ci-cd/actions/workflows/pythonapp.yml)
-[![Build Status](https://dev.azure.com/sonercand/flask-ml-deploy/_build/latest?definitionId=8&branchName=main)]
+[![Python application test with Github Actions](https://github.com/sonercand/flaskapp-azure-ci-cd/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/sonercand/flaskapp-azure-ci-cd/actions/workflows/pythonapp.yml)[![Build Status](https://dev.azure.com/sonercand/flask-ml-deploy/_apis/build/status/sonercand.flaskapp-azure-ci-cd?branchName=main)](https://dev.azure.com/sonercand/flask-ml-deploy/_build/latest?definitionId=8&branchName=main)
 # Overview
 Building CI/CD pipeline using github actions and azure devops pipelines. Project involves a dummy flask application and azure webapps. 
 Any changes to the flask application developped locally would be pushed in to git repository consequently triggering github actions(including activities such as setup Python, installing dependencies, lint with pylint, test with pytest). Then azure pipelines connected to git repository would be triggered to build and deploy the flask application into azure webapp microservice.
