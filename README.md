@@ -1,6 +1,9 @@
 # Overview
 Building CI/CD pipeline using github actions and azure devops pipelines. Project involves a dummy flask application and azure webapps. 
 Any changes to the flask application developped locally would be pushed in to git repository consequently triggering github actions(including activities such as setup Python, installing dependencies, lint with pylint, test with pytest). Then azure pipelines connected to git repository would be triggered to build and deploy the flask application into azure webapp microservice.
+
+![Overview](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/overview_diagram.jpg)
+
 ## Project Plan
 <TODO: Project Plan
 
