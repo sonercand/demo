@@ -12,6 +12,6 @@ test:
 
 lint:
 	#hadolint Dockerfile #uncomment to explore linting Dockerfiles
-	pylint --disable=R,C,W0702,W0703 app.py
+	pylint --disable=R,C,W0702,W0703 ~/flaskapp-azure-ci-cd/application/app.py
 
 all: install lint test
