@@ -1,13 +1,16 @@
-import pytest
+import sys
+sys.path.append('~/flaskapp-azure-ci-cd/application')
+from application import app as app_
 import flask
-from flask import request, jsonify
-from flask import Flask, Response as BaseResponse, json
-from flask.testing import FlaskClient
-from .. import app
-print(app)
+
+app = app_.app
 # flask app routes
 def test_home():
-    with app.test_request_context('/') :
-        assert(flask.request.path == '/')
-        assert(flask.request.status_code==200)
-   
+    with app.test_client() as c:
+      r = c.get('/')
+      assert(r.status_code == 200)
+
+def test_predict():
+    with app.test_client() as c:
+      r = c.post('/predict')
+      assert(r.status_code == 200)  
