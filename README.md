@@ -16,7 +16,7 @@ Any changes to the flask application developped locally would be pushed in to gi
 ### Running Instructions
 Note: For simplicity azure cloud shell was used to store the local code in this instance however code editing environment could simply be the local machine since the whole process is automated it would not make any difference. 
 #### Steps:
-* 1. Clone this repo into your development environment. If you have not already go to your dev. environment and create and ssh key. Copy your puplic key and paste into github(can be found under settings>ssh and gpg keys). For more information please read [github documentation](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). The image below is the screen shot from azure cloud shell while repo was being cloned. 
+* 1. Clone this repo into your development environment. If you have not already, go to your dev. environment and create an ssh key. Copy your puplic key and paste into github(can be found under settings>ssh and gpg keys). For more information please read [github documentation](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). The image below is the screen shot from azure cloud shell while repo was being cloned. 
 ![Screen shot cloning a repo](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/cloning_repo_to_azure.PNG)
 Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
 * 2. 
