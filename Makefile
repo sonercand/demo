@@ -1,5 +1,5 @@
 setup:
-	python3 -m venv ~/.udacity
+	python3 -m venv ~/.venv
 
 install:
 	pip install --upgrade pip &&\
@@ -7,11 +7,9 @@ install:
 
 test:
 	python -m pytest tests/*.py
-	#python -m pytest --nbval notebook.ipynb
 
 
 lint:
-	#hadolint Dockerfile #uncomment to explore linting Dockerfiles
 	pylint --disable=R,C,W0702,W0703 ./application/app.py
 
 all: install lint test
