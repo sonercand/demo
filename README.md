@@ -20,17 +20,17 @@ Note: For simplicity azure cloud shell was used to store the local code in this 
 ![Screen shot cloning a repo](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/cloning_repo_to_azure.PNG)
 Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
 * 2. Running make file
-  * Make setup: This will create a python virtual environment
-  ![Run MakeSetup](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2015.55.jpg)
-  * Activate virtual environment:
-      
-         source ~/.venv/bin/activate
-         
-  ![activate env](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2016.11.jpg)
-  * Run make all:This will install requirements, and will run pytest and pylint. Once you run make all you should see a screen similar to the one below.
-  ![make all](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2016.36.jpg)
+  * Make setup: This will create a python virtual environment ![Run MakeSetup](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2015.55.jpg)
   
-* 
+  * Activate virtual environment: ![activate env](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2016.11.jpg)
+  
+  * Run make all:This will install requirements, and will run pytest and pylint. Once you run make all you should see a screen similar to the one below. ![make all](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2016.36.jpg)
+  
+* 3. az webapp up: Creates a webapp and deploys it from local folder.
+![webapp up](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2017.57.jpg)
+
+
+
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
 * Project running on Azure App Service
