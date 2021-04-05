@@ -1,4 +1,6 @@
 ![Python application test with Github Actions](https://github.com/sonercand/flaskapp-azure-ci-cd/actions/workflows/pythonapp.yml/badge.svg) [![Build Status](https://dev.azure.com/sonercand/flask-ml-deploy/_apis/build/status/sonercand.flaskapp-azure-ci-cd?branchName=main)](https://dev.azure.com/sonercand/flask-ml-deploy/_build/latest?definitionId=8&branchName=main)
+
+
 # Overview
 Building CI/CD pipeline using github actions and azure devops pipelines. Project involves a dummy flask application and azure webapps. 
 Any changes to the flask application developped locally would be pushed in to git repository consequently triggering github actions(including activities such as setup Python, installing dependencies, lint with pylint, test with pytest). Then azure pipelines connected to git repository would be triggered to build and deploy the flask application into azure webapp microservice.
@@ -26,9 +28,10 @@ Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
   
   * Run make all:This will install requirements, and will run pytest and pylint. Once you run make all you should see a screen similar to the one below. ![make all](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2016.36.jpg)
   
-* 3. az webapp up: Creates a webapp and deploys it from local folder.
-![webapp up](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2017.57.jpg)
-
+* 3. az webapp up: Creates a webapp and deploys it from local folder. ![webapp up](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2017.57.jpg) This will create and deploy webapp within the selected resource group(--resource-group <rg name>).Note: The name parameter(-n <name>) should be unique since it will be a subdomain name on https://<name>.azurewebsites.net.
+* 4. Check if everything works. 
+   * Check the url created as a result of webapp creation process.You should see this output below: ![html](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2020.27.jpg)
+   * Test output: Check if ./make_predict_azure_app.sh returns the expected result as below: ![output](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2020.42.jpg)
 
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
