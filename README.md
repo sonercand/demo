@@ -3,17 +3,24 @@
 Building CI/CD pipeline using github actions and azure devops pipelines. Project involves a dummy flask application and azure webapps. 
 Any changes to the flask application developped locally would be pushed in to git repository consequently triggering github actions(including activities such as setup Python, installing dependencies, lint with pylint, test with pytest). Then azure pipelines connected to git repository would be triggered to build and deploy the flask application into azure webapp microservice.
 
-![Overview](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/overview_diagram.jpg)
+
 
 ## Project Plan
 * [Project Trello Board](https://trello.com/b/DTgl4eeb/building-ci-cd-pipeline)
 * [Project Plan](https://docs.google.com/spreadsheets/d/1hhWwv4-5kIjGAPCK1zGWjlT58VBuoIrDHjL-ercclaE/edit?usp=sharing)
 
 ## Instructions
-
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
-
+### Architectural Diagram
+![Overview](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/overview_diagram.jpg)  
+* Project Overview Diagram depicting the main components(Local Code, GitHub, Azure DevOps,and Azure WebApps) and how they are tied together.
+### Running Instructions
+Note: For simplicity azure cloud shell was used to store the local code in this instance however code editing environment could simply be the local machine since the whole process is automated it would not make any difference. 
+#### Steps:
+* 1. Clone this repo into your development environment. If you have not already go to your dev. environment and create and ssh key. Copy your puplic key and paste into github(can be found under settings>ssh and gpg keys). For more information please read [github documentation](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). The image below is the screen shot from azure cloud shell while repo was being cloned. 
+![Screen shot cloning a repo](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/cloning_repo_to_azure.PNG)
+Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
+* 2. 
+* 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
 * Project running on Azure App Service
