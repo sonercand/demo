@@ -19,7 +19,17 @@ Note: For simplicity azure cloud shell was used to store the local code in this 
 * 1. Clone this repo into your development environment. If you have not already, go to your dev. environment and create an ssh key. Copy your puplic key and paste into github(can be found under settings>ssh and gpg keys). For more information please read [github documentation](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). The image below is the screen shot from azure cloud shell while repo was being cloned. 
 ![Screen shot cloning a repo](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/cloning_repo_to_azure.PNG)
 Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
-* 2. 
+* 2. Running make file
+  * Make setup: This will create a python virtual environment
+  ![Run MakeSetup](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2015.55.jpg)
+  * Activate virtual environment:
+      
+         source ~/.venv/bin/activate
+         
+  ![activate env](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2016.11.jpg)
+  * Run make all:This will install requirements, and will run pytest and pylint. Once you run make all you should see a screen similar to the one below.
+  ![make all](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2016.36.jpg)
+  
 * 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
