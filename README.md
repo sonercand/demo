@@ -34,7 +34,7 @@ Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
 * 4. Check if everything works. 
    * Check the url created as a result of webapp creation process.You should see this output below: ![html](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2020.27.jpg)
    * Test output: Check if ./make_predict_azure_app.sh returns the expected result as below: ![output](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2020.42.jpg)
-   * Load Testing: For load testing locust is used. Install locust via pip and create a locust.py file. For more details please check [locust quick start guide](https://docs.locust.io/en/stable/quickstart.html)
+   * Load Testing: For load testing locust is used. Install locust via pip and create a locust.py file(file name is typically locustfile.py even though in this instance it is just locust). For more details please check [locust quick start guide](https://docs.locust.io/en/stable/quickstart.html). Then in command line run locust --locustfile==locust.py. When locust starts click on the localhost link where you can set the host name, number of users and swarm rate for the load test.![locust page](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2017.04.jpg) ![locust stats](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2017.03.jpg)
 #### Setting up CI/CD pipelines.
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
