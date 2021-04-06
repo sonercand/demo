@@ -36,7 +36,21 @@ Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
    * Test output: Check if ./make_predict_azure_app.sh returns the expected result as below: ![output](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2020.42.jpg)
    * Load Testing: For load testing locust is used. Install locust via pip and create a locust.py file(file name is typically locustfile.py even though in this instance it is just locust). For more details please check [locust quick start guide](https://docs.locust.io/en/stable/quickstart.html). Then in command line run locust --locustfile==locust.py. When locust starts click on the localhost link where you can set the host name, number of users and swarm rate for the load test.![locust page](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2017.04.jpg) ![locust stats](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2017.03.jpg)
 #### Setting up CI/CD pipelines.
+* 1. Set up Github Actions: Click on actions tab on github repo. Then click new workflow button which will take you to a page where you can choose a workflow template or create one for yourself. In this instance, pythonapp.yml is the workflow file which is under .github/workflows. It is triggered on push, runs on ubuntu, sets up python 3.5 and runs make commands. So that when new code pushed into the repo it will automatically be linted and tested.![github actions](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2017.34.jpg)
+* 2. Setting up Azure Devops Pipelines:
+   * login to azure devops
+   * create a project
+   * Click project settings and create service connection. 
+   * Create new service connection
+   * Select Azure Resource Manager then select service principal. In this step you will select your subscription and resource group to host the service principal.
+   * create a new pipeline 
+   * select repository (where you host the source code). In this instance it is a github repo so select github and then select the relevant repo. 
+   * configure your pipeline to deploy python code to azure webapp.
+* 3. Test run to see if everything works all right. Currently home page of the webapp displays 'Sklearn Prediction Home'. Just change it to 'Sklearn Prediction Home Page' in your local env. and push the changes to github within short time the change should be reflected in the webapp home page. 
+  
 
+ 
+ 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
 * Project running on Azure App Service
