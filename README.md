@@ -52,38 +52,16 @@ Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
    * Check azure devops pipelines:![pipelines](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2018.28.jpg)
    * Check webapp deployment: ![webpage](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2021.44.jpg)
 
+#### Reading streaming logs from the application:
+![how to read logs](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2022.05.jpg)
+![Live logs](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2022.06.jpg)
  
  
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
-
-* Project running on Azure App Service
-
-* Project cloned into Azure Cloud Shell
-
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
-
-* Output of a test run
-
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-* Running Azure App Service from Azure Pipelines automatic deployment
-
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
-
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
-
-* Output of streamed log files from deployed application
-
-> 
-
 ## Enhancements
-
-<TODO: A short description of how to improve the project in the future>
+* Using entirely azure devops by moving the code repo to azure devops. 
+* Writing all the infrastructure related scripts in terraform and version control them.
+* Creating pipelines with dev->test->production promotion path.
+* Utilising pipeline parameters.
 
 ## Demo 
 
