@@ -46,11 +46,11 @@ Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
    * create a new pipeline 
    * select repository (where you host the source code). In this instance it is a github repo so select github and then select the relevant repo. 
    * configure your pipeline to deploy python code to azure webapp.
-* 3. Test run to see if everything works all right. Currently home page of the webapp displays 'Sklearn Prediction Home'. Just change it to 'Sklearn Prediction Home Page' in your local env. and push the changes to github within short time the change should be reflected in the webapp home page. 
-   * Push the change from local repo with a commit message in this case commit message is minor: test ci/cd:![local change](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2018.20.jpg)
+* 3. Test run to see if everything works all right.  
+   * Push a change from local repo with a commit message in this case commit message is minor: test ci/cd:![local change](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2018.20.jpg)
    * Check azure actions:![actions](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2018.25.jpg)
    * Check azure devops pipelines:![pipelines](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2018.28.jpg)
-   * Check the actual webpage: ![webpage]()
+   * Check webapp deployment: ![webpage](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2006-04-2021%20at%2021.44.jpg)
 
  
  
