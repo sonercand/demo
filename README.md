@@ -17,7 +17,9 @@ Any changes to the flask application developped locally would be pushed in to gi
 * Project Overview Diagram depicting the main components(Local Code, GitHub, Azure DevOps,and Azure WebApps) and how they are tied together.
 ### Running Instructions
 Note: For simplicity azure cloud shell was used to store the local code in this instance however code editing environment could simply be the local machine since the whole process is automated it would not make any difference. 
-#### Steps:
+#### Setting up: code and the environment
+Following steps are for setting up the code environment and deploying it to azure platform. In other words prepping up for ci/cd pipeline
+##### Steps:
 * 1. Clone this repo into your development environment. If you have not already, go to your dev. environment and create an ssh key. Copy your puplic key and paste into github(can be found under settings>ssh and gpg keys). For more information please read [github documentation](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). The image below is the screen shot from azure cloud shell while repo was being cloned. 
 ![Screen shot cloning a repo](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/cloning_repo_to_azure.PNG)
 Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
@@ -32,7 +34,8 @@ Here is the syntax: git clone git@github.com:sonercand/flaskapp-azure-ci-cd.git
 * 4. Check if everything works. 
    * Check the url created as a result of webapp creation process.You should see this output below: ![html](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2020.27.jpg)
    * Test output: Check if ./make_predict_azure_app.sh returns the expected result as below: ![output](https://github.com/sonercand/flaskapp-azure-ci-cd/blob/main/diagrams/Image%2005-04-2021%20at%2020.42.jpg)
-
+   * Load Testing: For load testing locust is used. Install locust via pip and create a locust.py file. For more details please check [locust quick start guide](https://docs.locust.io/en/stable/quickstart.html)
+#### Setting up CI/CD pipelines.
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
