@@ -11,7 +11,7 @@ def test_home():
 
 def test_predict():
     with app.test_client() as c:
-      r = c.post('/predict',payload={
+      r = c.post('/predict',json={
                 "CHAS":{
                     "0":0
                 },
