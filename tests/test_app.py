@@ -1,6 +1,5 @@
 import sys
-sys.path.append('~/flaskapp-azure-ci-cd/application')
-from application import app as app_
+import app as app_
 import flask
 
 app = app_.app
