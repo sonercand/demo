@@ -10,6 +10,6 @@ test:
 
 
 lint:
-	pylint --disable=R,C,W0702,W0703 ./application/app.py
+	pylint --disable=R,C,W0702,W0703 app.py
 
 all: install lint test
